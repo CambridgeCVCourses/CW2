@@ -32,6 +32,7 @@ mamba install -c "nvidia/label/cuda-12.1.0" cuda-toolkit -y
 
 
 ## clone Pi3, MoGe and install dependencies
+mkdir -p external
 cd external
 git clone https://github.com/CambridgeCVCourses/Pi3.git
 git clone https://github.com/CambridgeCVCourses/MoGe.git

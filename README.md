@@ -11,7 +11,7 @@ The code has been tested on Cambridge HPC with NVIDIA A100 GPUs, CUDA 12.1, and 
 ### 1.0 Install Mamba
 I use [mamba](https://mamba.readthedocs.io/en/latest/index.html) to maintain Python environments. It is a drop-in replacement for [conda](https://docs.conda.io/projects/conda/en/latest/index.html) that is usually much faster at solving environment dependencies. You may use `conda` as well if you already have `conda`; simply replace `mamba` with the regular `conda` in the following commands.
 
-To install mamba, first, we need to log into Cambridge HPC. If you have not done this before, follow the [instructions](https://docs.hpc.cam.ac.uk/hpc/user-guide/quickstart.html) to set up your HPC account. You can log into the HPC using this command in your terminal with your [CRSID]:
+To install mamba, first, we need to log into Cambridge HPC. If you have not done this before, follow the [instructions](https://docs.hpc.cam.ac.uk/hpc/user-guide/quickstart.html) to set up your HPC account. You can log into the HPC using this command in your terminal with your `[CRSID]`:
 ```
 ssh [CRSID]@login-icelake.hpc.cam.ac.uk
 ```
@@ -40,7 +40,7 @@ Once you acquired an interactive session, simply run `setup_env.sh` to set up th
 bash setup_env.sh
 ```
 
-Be aware that this can take roughly 30 minutes. Once the script has fully completed, your Python environment should be ready to use by:
+Be aware that this can take **roughly 30 minutes**. Once the script has fully completed, your Python environment should be ready to use by:
 ```
 mamba activate ns
 ```
