@@ -65,7 +65,8 @@ ns-process-data video --data data/static_scene.mp4 --output-dir results/colmap/s
 Remember to use the `--no-gpu` as we have only installed a CPU version of COLMAP.
 
 ### Visualisation
-Once COLMAP has successfully estimated the camera poses, we can use Viser to visualise the results. To initiate the visualiser, first run the following command on the server:
+#### Using Viser
+Once COLMAP has successfully estimated the camera poses, we can use [Viser](https://viser.studio/main/) to visualise the results. To initiate the visualiser, first run the following command on the server:
 ```
 python visualise_poses.py --scene-path results/colmap/static_scene
 ```
@@ -76,6 +77,9 @@ To do so, first, identify which GPU node you're using on the HPC (eg, `gpu-q-1`)
 ssh -L 8080:gpu-q-1:8080 [CRSID]@login-icelake.hpc.cam.ac.uk
 ```
 You will then be able to access the viewer by opening `http://localhost:8080` in your local browser.
+
+#### Using MeshLab
+Another light-weight 3D visualisation tool is [MeshLab](https://www.meshlab.net/), which allows you to visualise 3D point clouds, meshes, etc. locally. To visualise the reconstructed sparse point cloud from COLMAP, simply drag the `.ply` file into MeshLab.
 
 ### Running Pi3
 In Task 1.2, you are required to run Pi3 to estimate camera poses and compare the results to COLMAP's predictions. To run Pi3, an incomplete inference script is provided in `pi3_inference.py`. You are required to complete two small implementations inside the `write_transforms_json` function, indicated by `## YOUR CODE HERE`, which converts Pi3's predictions into the same format produced by `ns-process-data`.
