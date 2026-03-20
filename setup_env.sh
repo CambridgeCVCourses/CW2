@@ -54,8 +54,8 @@ pip install ./wheels/tinycudann-2.0-cp310-cp310-linux_x86_64.whl
 ## install colmap (CPU-only), nerfstudio, and gsplat
 mamba install colmap=3.8.0=cpuhc4e8ae7_23 -y
 pip install nerfstudio
-pip install git+https://github.com/nerfstudio-project/gsplat.git --no-build-isolation
-
+# pip install git+https://github.com/nerfstudio-project/gsplat.git --no-build-isolation
+pip install ./wheels/gsplat-1.5.3-cp310-cp310-linux_x86_64.whl
 
 ## install SAM2
 # cd external
